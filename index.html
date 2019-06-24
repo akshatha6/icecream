@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+/* Add a gray background color with some padding */
+body {
+  font-family: Arial;
+  padding: 20px;
+ background-color:lightskyblue;
+}
+
+/* Header/Blog Title */
+.header {
+  padding: 3px;
+  height:10px;
+  font-size: 20px;
+  color:white;
+  text-align: center;
+  
+}
+.text-block {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background-color:none;
+  color: white;
+  padding-left: 20px;
+  padding-right: 100px;
+}
+.container {
+  padding: 10px;
+}
+
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both
+}
+
+.column-66 {
+  float: left;
+  width: 66.66666%;
+  padding: 20px;
+}
+.navbar {
+  overflow: hidden;
+  background-color:lightpink;
+  font-family: Arial, Helvetica, sans-serif;
+  
+}
+.button {
+  background-color: red; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+
+.navbar a {
+  float: right;
+  font-size: 16px;
+  color:black;
+  
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.dropdown {
+  float: right;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: black;
+  padding: 14px 16px;
+  background-color: inherit;
+  font: inherit;
+    text-align:  
+  margin: 0;
+}
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-image:url("icee.jpg");
+}
+
+.dropdown-content {
+    display: none;
+  position: absolute;
+  background-image:url("ice3.jpg");
+  width: 100%;
+  left: 0;
+  color:black;
+ 
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content .header {
+  background:lightpink;
+  padding: 16px;
+  color: black;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.column-33 {
+  float: right;
+  width:33.333%;
+  
+}
+
+.large-font {
+  font-size: 48px;
+}
+
+.xlarge-font {
+  font-size: 64px
+}
+
+.button {
+  border: none;
+  color: white;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #4CAF50;
+}
+
+img {
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
+
+@media screen and (max-width: 1000px) {
+  .column-66,
+  .column-33 {
+    width: 100%;
+    text-align: center;
+  }
+  img {
+    margin: auto;
+  }
+}
+
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {   
+  float: left;
+  width: 75%;
+}
+.pink
+{
+    background-image:url("i3.jpg");
+    min-height: 150px;
+
+/* Center and scale the image nicely */
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+position: relative;
+text-align:left;
+}
+
+/* Right column */
+.rightcolumn {
+  float: left;
+  width: 25%;
+  padding-left: 20px;
+}
+
+/* Fake image */
+
+
+/* Add a card effect for articles */
+.card {
+   
+   padding: 10px;
+   margin-top: 30px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+  margin-top: 20px;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {   
+    width: 100%;
+    padding: 0;
+  }
+}
+</style>
+</head>
+<body>
+  <div class="navbar">
+    
+    <div class="row">
+     
+  <div class="col-sm-6">
+  <div class="navbar">
+    <a href="#home">About</a>
+    <div class="dropdown">
+      <button class="dropbtn">Menu
+      </button>
+      <a href="http://santacruzpolarbear.com/"><i class="fa fa-fw fa-user"></i> Login</a>
+      <div class="dropdown-content">
+       <div class="container"> 
+        <div class="row" >
+          <h2 style="text-align:center">Today's Offer</h2>
+         
+          <div class="colg-lg-4">
+            <h3>Fundaes</h3>
+            <h5>Kesar Kulfi</h5>
+            <h5>Lychee Elite</h5>
+            <h5>Deep Purple</h5>
+            <h5>Dry fruits spl</h5>
+            <h5>Ice Cream pizza</h5>
+            </div>
+            
+                  <div class="colg-lg-4">
+                  <h3>Chcolate Sundaes</h3>
+          
+                  <h5>Berry Colate</h5>
+                  <h5>Excess Chocolate</h5>
+                  <h5>Brownie Fudge</h5>
+                  <h5>Chocozilla</h5>
+                  <h5>Death by chocolate</h5>
+              </div>
+              <div class="colg-lg-4">
+                <h3>Scoops</h3>
+                <h5>Arabian Dates
+                </h5>
+                <h5>Belgian Chocolate</h5>
+                <h5>Coffee Brazilla</h5>
+                <h5>Real Chikoo</h5>
+                <h5>Alphnonso Mango</h5>
+              </div>
+            </div>
+          </div>
+          </div> 
+          </div>
+          
+        </div>
+    <div class="container fluid">
+        <img src="ice4.jpg" alt="red velvet" height="1400px" width="1400px">
+        <div class="text-block">
+                <h1><em>Bruster's Ice Cream</em> </h1>
+               
+              </div>
+    </div>
+  
+          <div class="container">
+            <div class="row">
+              <div class="column-66">
+                <h1 class="xlarge-font"><b>About</b></h1>
+                <h1 class="large-font" style="color:MediumSeaGreen;"><b>Fresh n' Tasty!</b></h1>
+                <p>We produce our ice cream in small batches to create a concentrated rich flavor with a homemade taste.
+                        Our flavoring is all-natural, just the way it’s always been.</p>
+              
+                <a href="https://www.hugedomains.com/domain_profile.cfm?d=polarbearicecream&e=com" target="_blank">
+                <button class="button" style="background-color:red">Read More</button></a>
+              </div>
+              
+            </div>
+          </div>
+    <div class="container fluid">
+            <img src="icee.jpg" alt="choco" height="1400px" width="1400px">
+        </div>
+        
+               <div class="row">
+                    <h1 style="text-align: center; color:blue"><strong>FLAVORS</strong></h1>
+                    <h2 style="text-align: center;">We are proud to handcraft over 40 tasty flavors of ice cream just for you. Check out our ice cream pies and ice cream sandwiches.</h2>
+                    </div>
+                    <div class="row">
+                        <div class="colg-lg-6">
+                                                <h4>Locally Sourced Ingredients</h4>
+                                                    <ul>
+                                                        <li>Vanilla Company - Santa Cruz</li>
+                                                        <li>Marini's Candies - Santa Cruz</li>
+                                                        <li>Pacific Cookie Company - Santa Cruz</li>
+                                                        <li>Blackflower Company- Felton</li>
+                                                        <li>Jeff Walls' Family Honey - Soquel</li>
+                                                        <li>Gizdich Ranch - Watsonville</li>
+                                                        <li>The Inn Farms - Watsonville</li>
+                                                        <li>The Nut Factory - Lafayette</li>
+                    
+                                                    </ul>
+                                                </div>
+                    
+                                            
+                                            <div class="colg-lg-6" style="background-color:white">
+                                                
+                                                    <h4>Vanillas</h4>
+                                                    <ul>
+                                                        <li><strong>Birthday Cake</strong>: Cake batter ice cream with rainbow sprinkles</li>
+                                                        <li><strong>Cake Batter</strong>: Cake batter ice cream</li>
+                                                        <li><strong>Chocolate Chip</strong>: Vanilla ice cream with locally made natural vanilla extract, with chocolate chunks</li>
+                                                        <li><strong>Cookie Dough</strong>: Vanilla Ice Cream with locally made natural vanilla extract, with Pacific Cookie Company Chocolate Chip Cookie Dough</li>
+                    <li><strong>Milk and Cookies</strong>: Vanilla Ice Cream with Oreo pieces</li>
+                    <li><strong>Motor Cop Crunch</strong>: Vanilla Ice Cream with malt balls, Oreo cookies, espresso chocolate chips.</li>
+                    <li><strong>Old Fashioned Vanilla</strong>:&nbsp; Vanilla Ice Cream with Venetian Vanilla extract.</li>
+                    <li><strong>Vanilla Bean</strong>: Vanilla Ice Cream with natural Madagascar vanilla extract &amp; vanilla bean flakes</li>
+                    <li><strong>Caramel Avalanche</strong>:&nbsp; Vanilla Ice Cream with brownies and a salted caramel swirl</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                                <div class="row">
+                                                    <div class="colg-lg-12">
+                                                    <h4>Chocolates</h4>
+                                                    <ul>
+                                                        <li><strong>Chocolate Peanut Butter</strong>:&nbsp; Chocolate ice cream with a peanut butter swirl</li>
+                    <li><strong>Chocolate Brownie Batter</strong>: Chocolate brownie batter ice cream with brownie pieces</li>
+                    <li><strong>Chocolate Chocolate Chip</strong>:&nbsp; Chocolate ice cream with chocolate chips</li>
+                    <li><strong>Chubby Cub Chocolate</strong>: chocolate ice cream that includes our signature blend of 2 types of cocoa powder.</li>
+                    <li><strong>Mexican Chocolate</strong>: cinnamon chocolate ice cream with almonds and chocolate chips</li>
+                    <li><strong>Rocky Road</strong>: Chocolate ice cream with mini marshmallows &amp; almonds.</li>
+                                                    </ul>
+                                                </div>
+                                                </div>
+                                                <div class="row pink">
+                                                <div class="colg-lg-4">
+                                                    <h4>Fruits</h4>
+                                                    <ul>
+                                                        <li><strong>Banana Mango:</strong> fresh banana ice cream with mangos.</li>
+                    <li><strong>Burgundy Cherry:</strong> Cherry Ice cream with Bing cherries</li>
+                    <li><strong>Lavender &amp; Honey:</strong> Natural lavender ice cream with Sam Walls honey from Soquel</li>
+                    <li><strong>Monkey Business:</strong> Fresh Banana Ice Cream with Sam Walls Honey &amp; chocolate peanut butter cups.</li>
+                    <li><strong>Olallieberry &amp; Honey:</strong> Natural blackberry ice cream with Olallieberries (from Gizdich Ranch) &amp; Sam Walls Honey.</li>
+                    <li><strong>Strawberry:</strong> Strawberry ice cream with Watsonville Strawberries</li>
+                                                    </ul>
+                                                </div>
+                                        
+                                
+                                                <div class="colg-lg-4">
+                                                    <h4>Nuts</h4>
+                                                    <ul>
+                    <li><strong>Butter Pecan:</strong> Natural butter pecan ice cream with salted pecans</li>
+                    <li><strong>Pistachio:</strong> Pistachio ice cream with salted pistachio pieces.</li>
+                                                    </ul>
+                                                </div>
+                                                <div class="colg-lg-4">
+                                                    <h4>Coffees</h4>
+                                                    <ul>
+                    <li><strong>Almond Mocha Fudge:</strong>&nbsp; Coffee ice cream with almonds &amp; fudge swirl</li>
+                    <li><strong>Coffee Toffee:</strong> Coffee ice cream with Heath bar pieces</li>
+                    <li><strong>Island Mocha:</strong> Coffee &amp; coconut ice creams with chocolate chunks</li>
+                    <li><strong>Turkish Coffee:</strong> Coffee ice cream with fine granulated coffee.</li>
+                                                  </ul>
+                                                </div>
+                                            </div>
+                                                <div class="row">
+                                                    <div class="colg-lg-6">
+                                                    <h4>Caramels</h4>
+                                                    <ul>
+                    <li><strong>Dirty Paws:</strong> Caramel ice cream with Oreo pieces &amp; fudge swirl</li>
+                    <li><strong>Salted Caramel:</strong> Salted Caramel ice cream</li>
+                    <li><strong>Salty Bear:</strong> Salted caramel ice cream mixed with dark chocolate ice cream</li>
+                                                    </ul>
+                                                </div>
+                                                <div class="colg-lg-6">
+
+                                                    <h4>Others</h4>
+                                                    <ul>
+                    <li><strong>Blackflower Chai: </strong>Ice Cream with the signature Chai spice from Blackflower</li>
+                    <li><strong>Cotton Candy: </strong>Ice Cream with cotton candy flavor &amp; rainbow sprinkles</li>
+                    <li><strong>Thin Mint:</strong> Peppermint ice cream with chocolate chips.</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                            
+                            
+                                            <div class="container fluid">
+                                                    <img src="i4.jpg" alt="vanilla" height="1400px" width="1400px">
+                                                </div>
+
+<!-- Clarity Section -->
+<div class="container" style="background-color:white">
+  <div class="row">
+    <div class="column-66">
+      <h1 class="xlarge-font"><b>LOCATIONS</b></h1>
+      <h1 class="large-font" style="color:red;"><b></b></h1>
+      <p><span style="font-size:24px">We can be found in scoop shops, restaurants, and groceries all around Santa Cruz County.</p>
+        <a href="http://santacruzpolarbear.com/"><button class="button" style="background-color:red">Read More</button></a>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- The App Section -->
+
+<div class="row">
+  <div class="leftcolumn">
+    <div class="card" style="background-color:pink">
+      <h2>Establishment</h2>
+      
+      
+      <p>Established in 1975.  
+
+            Fun creative flavors and a commitment to local sourcing have been hallmarks of the Polar Bear way since our founding in 1975. The secret recipes are hand-made in small artisan batches, right here in Santa Cruz. We started with a small ice cream shop on Soquel Ave in Santa Cruz, CA and a production plant in the Harvey West area. Soon thereafter, the original Polar Bear shop moved to a better location on Soquel Ave. Supplying restaurants and scoop shops in the area, including the iconic shop at Stockton and the Esplanade in Capitola, Polar Bear built a loyal and loving fan base.
+            
+            In 2005, we focused on wholesale sales to shops, grocery and eateries, and after a decade of growth, Polar Bear expanded its distribution and production capability by partnering with Santa Cruz's other longtime local favorite, Marianne's. This alliance has allowed Polar Bear to focus on quality and production while ensuring the distribution and operations are efficiently managed. Today, the fun is mixed in every day and we are committed to our natural ice cream, responsible sourcing of flavors, mix-ins, and the creative invention that reflect Santa Cruz.
+            
+            Thank you for 40+ years of love!</p>
+      
+    </div>
+    
+  </div>
+  <div class="rightcolumn">
+    <div class="card" style="background-color:royalblue">
+      <h2>About Me</h2>
+      
+      <p>Akshatha Prakash</p>
+      <p>7760536951</p>
+    </div>
+    
+    <div class="card" style="background-color:royalblue">
+      <h3 >Follow Me</h3>
+      <a href="https://www.facebook.com/Polar-Bear-Ice-Cream-108682269855/" style="color:red">Facebook link</a>
+      <a href="https://www.instagram.com/polarbearicecreams/" style="color:red">Instagram link</a>
+    </div>
+  </div>
+</div>
+<div class="container">
+        <div class="row">
+            <div class="colg-lg-6">
+                    <form action="/action_page.php">
+                        <label for="fname">First Name</label>
+                        <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                    
+                        <label for="lname">Last Name</label>
+                        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+                    
+                        <label for="country">City</label>
+                        <select id="country" name="country">
+                          <option value="australia">bangalore</option>
+                          <option value="canada">tumkur</option>
+                          <option value="usa">mysore</option>
+                        </select>
+                    
+                        <label for="subject">Subject</label>
+                        <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+                    
+                        <input type="submit" value="Submit">
+                      </form>
+            
+          </div>
+          <div class="colg-lg-6">
+    
+          
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.9791041572385!2d77.64105091464451!3d12.909064490896887!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae149a6bf4d1dd%3A0x4c58284bbdd727b3!2sPolar+Bear+Ice+Creams!5e0!3m2!1sen!2sin!4v1561368396845!5m2!1sen!2sin" width="1200" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>   
+            </div>
+            </div>
+            </div>
+
+<div class="footer" style="background-color:royalblue;color:black">
+  <h2>THANK YOU</h2>
+</div>
+
+</body>
+</html>
